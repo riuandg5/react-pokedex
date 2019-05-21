@@ -1,12 +1,12 @@
 import React from 'react';
 import { CssBaseline } from '@material-ui/core';
-import Pokecard from './Pokecard';
+import Pokedex from './Pokedex';
 
 function App() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Pokecard />
+      <Pokedex />
     </React.Fragment>
   );
 }

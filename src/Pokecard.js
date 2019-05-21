@@ -4,8 +4,8 @@ const POKE_API = 'http://assets.pokemon.com/assets/cms2/img/pokedex/detail';
 
 class Pokecard extends Component {
   render() {
-    const pokemon = { id: '004', name: 'Charmander', type: 'fire', exp: 62 };
-    const imgSrc = `${POKE_API}/${pokemon.id}.png`;
+    const { id, name, type, exp } = this.props;
+    const imgSrc = `${POKE_API}/${id}.png`;
     return (
       <Card style={{ maxWidth: '180px' }}>
         <CardContent
@@ -16,13 +16,13 @@ class Pokecard extends Component {
           }}
         >
           <Typography variant="title" color="primary">
-            {pokemon.name}
+            {name}
           </Typography>
-          <img src={imgSrc} alt={pokemon.name} height="150px" />
-          <Typography variant="subtitle1">
-            Type: {pokemon.type}
+          <img src={imgSrc} alt={name} height="150px" />
+          <Typography variant="subtitle1" align="center">
+            Type: {type}
             <br />
-            Exp: {pokemon.exp}
+            Exp: {exp}
           </Typography>
         </CardContent>
       </Card>
